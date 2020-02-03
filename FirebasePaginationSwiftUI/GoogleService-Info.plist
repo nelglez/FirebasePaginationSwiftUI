@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>608053356523-n9fvvjh4sout106vr4rbgmchpgeq5k7e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.608053356523-n9fvvjh4sout106vr4rbgmchpgeq5k7e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAHH_8yweI3TmsRioIYTggp3aKtwgUfWaI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>608053356523</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nelsongonzalez.FirebasePaginationSwiftUI</string>
+	<key>PROJECT_ID</key>
+	<string>quotes-app-1be2e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quotes-app-1be2e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:608053356523:ios:52ae569b19894306991bae</string>
+	<key>DATABASE_URL</key>
+	<string>https://quotes-app-1be2e.firebaseio.com</string>
+</dict>
+</plist>
