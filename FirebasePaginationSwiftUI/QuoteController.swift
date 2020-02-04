@@ -12,7 +12,7 @@ import Firebase
 class QuoteController: ObservableObject, RandomAccessCollection {
     
     typealias Element = Quote
-    @Published private(set) var quotes: [Quote] = []
+    @Published var quotes: [Quote] = []
     
     var startIndex: Int { quotes.startIndex }
     var endIndex: Int { quotes.endIndex }
@@ -31,7 +31,7 @@ class QuoteController: ObservableObject, RandomAccessCollection {
     }
     
     init() {
-        fetchFromServer(limit: 10) { (error) in
+        fetchFromServer(limit: 5) { (error) in
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -107,10 +107,13 @@ class QuoteController: ObservableObject, RandomAccessCollection {
     }
     
     func fetchMore(currentItem: Quote?, limit: Int = 5, completion: @escaping(Error?) -> Void) {
-        
+        //Remove this for tinder app..
+        /*
         if !shouldLoadMoreData(currentItem: currentItem) {
             return
         }
+        */
+        
         
         self.currentlyLoading = true
         quoteQuery.start(afterDocument: lastQueryDocumentSnapshot!).limit(to: limit).getDocuments { snapShot, error in
@@ -133,6 +136,7 @@ class QuoteController: ObservableObject, RandomAccessCollection {
             print("SnapShot Document Count: ", snapShot.documents.count)
             
             var quotes = [Quote]()
+           
             for doc in snapShot.documents {
                 let doc  = doc.data() as [String: Any]
                 let quote = Quote(data: doc)
@@ -140,8 +144,9 @@ class QuoteController: ObservableObject, RandomAccessCollection {
                 quotes.append(quote)
                 
             }
+            self.quotes.insert(contentsOf: quotes, at: self.startIndex)
             
-            self.quotes.append(contentsOf: quotes)
+           // self.quotes.append(contentsOf: quotes)
             print("Second fetch count:", self.quotes.count)
             
             
