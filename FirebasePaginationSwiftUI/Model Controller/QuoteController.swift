@@ -107,12 +107,12 @@ class QuoteController: ObservableObject, RandomAccessCollection {
     }
     
     func fetchMore(currentItem: Quote?, limit: Int = 5, completion: @escaping(Error?) -> Void) {
-        //Remove this for tinder app..
-        /*
+        //Remove this for tinder app..lines 112 - 115
+        
         if !shouldLoadMoreData(currentItem: currentItem) {
             return
         }
-        */
+        
         
         
         self.currentlyLoading = true
